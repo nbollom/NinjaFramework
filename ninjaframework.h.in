@@ -1,0 +1,24 @@
+#ifndef NINJAFRAMEWORK_H
+#define NINJAFRAMEWORK_H
+
+#cmakedefine BUILD_LOG
+#cmakedefine BUILD_JSON
+#cmakedefine BUILD_CONFIG
+
+#ifdef BUILD_LOG
+#include <ninjaframework/ninjalog/log.h>
+#endif //BUILD_LOG
+
+#ifdef BUILD_JSON
+#include <ninjaframework/ninjajson/json.h>
+#endif //BUILD_JSON
+
+#ifdef BUILD_PACK
+#include <ninjaframework/ninjapack/pack.h>
+#endif //BUILD_PACK
+
+#ifdef BUILD_FILE
+#include <ninhaframework/ninjafile/file.h>
+#endif //BUILD_FILE
+
+#endif //NINJAFRAMEWORK_H

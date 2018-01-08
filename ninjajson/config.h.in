@@ -1,0 +1,31 @@
+#ifndef NINJAJSON_CONFIG_H
+#define NINJAJSON_CONFIG_H
+
+#include <string>
+
+#cmakedefine BUILD_LOG
+
+#ifdef BUILD_LOG
+    using namespace NinjaFramework;
+    #include <iostream>
+    #include <ninjaframework/ninjalog/log.h>
+    #define RUNTIME_ERROR(message) {\
+        log_error << message << std::endl;\
+        throw std::runtime_error(message);\
+    }
+    #define PARSE_ERROR(message, source) {\
+        log_error << message << std::endl;\
+        throw JSONParseException(message, source);\
+    }
+#else
+    #define RUNTIME_ERROR(message) {\
+        log_error << message << std::endl;\
+        throw std::runtime_error(message);\
+    }
+    #define PARSE_ERROR(message, source) {\
+        log_error << message << std::endl;\
+        throw JSONParseException(message, source);\
+    }
+#endif // BUILD_LOG
+
+#endif //NINJAJSON_CONFIG_H
