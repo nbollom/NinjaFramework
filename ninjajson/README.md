@@ -1,12 +1,12 @@
-#NinjaJSON
+# NinjaJSON
 
 A JSON parsing/writing library. Part of the NinjaFramework.
 
-###Dependancies
+### Dependancies
 
 -NinjaLog (optional)
 
-###Usage
+### Usage
 
 ```c++
 using namespace NinjaFramework::JSON;
@@ -17,7 +17,7 @@ std::shared_ptr<Document> doc = Document::Parse(json_doc);
 
 ```
 
-###FAQ
+### FAQ
 Q: Why do I need to use wstring or wistream instead of string or istream?
 A: Because JSON is by its definition is written in utf8 and supports wide characters
 

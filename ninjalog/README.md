@@ -1,12 +1,12 @@
-#NinjaLog
+# NinjaLog
 
 A simple logging library. Part of the NinjaFramework.
 
-###Dependancies
+### Dependancies
 
 None
 
-###Usage
+### Usage
 
 ```c++
 using namespace NinjaFramework;
