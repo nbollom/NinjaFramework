@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(HEADER_FILES
         2d.h
         image.h
+        context.h
         )
 
 set(SOURCE_FILES
@@ -13,6 +14,7 @@ set(SOURCE_FILES
         image.cpp
         glimage.h
         glimage.cpp
+        context.cpp
         )
 
 find_package(OpenGL REQUIRED)
